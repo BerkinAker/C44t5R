@@ -44,13 +44,13 @@ export default function AuthForm() {
     <div className="mt-12 mx-auto sm:mx-0 sm:max-w-md">
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
         {action === "SIGNUP" && (
-          <Input id="name" label="Name" register={register} errors={errors} />
+          <Input id="name" label="Name" register={register} disabled={isLoading} errors={errors} />
         )}
-        <Input id="email" label="E-mail" register={register} errors={errors} type="email" />
-        <Input id="password" label="Password" register={register} errors={errors} type="password" />
+        <Input id="email" label="E-mail" register={register} disabled={isLoading} errors={errors} type="email" />
+        <Input id="password" label="Password" register={register} disabled={isLoading} errors={errors} type="password" />
         <div className="space-y-[10px]">
           <Button type="submit" classNames="w-full sm:w-[400px] h-[60px] flex items-center" bgColor="bg-[#EF6B4A]" textColor="text-[#FFFFFF]" disabled={isLoading}>
-              {action === "LOGIN" ? "Login" : "Register"}
+            {action === "LOGIN" ? "Login" : "Register"}
           </Button>
           <Button classNames="w-full sm:w-[400px] h-[60px] flex items-center" bgColor="transparent" textColor="text-[#6251DD]" borderColor="border border-[#6251DD]" disabled={isLoading}>
             {action === "LOGIN" ? "Register" : "Login"}
