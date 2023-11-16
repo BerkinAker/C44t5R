@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { useForm, FieldValues, SubmitHandler } from "react-hook-form"
 import Input from "./inputs/Input"
+import Button from "./Button"
 
 type UserAction = "LOGIN" | "SIGNUP"
 
@@ -30,7 +31,7 @@ export default function AuthForm() {
 
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     setIsLoading(true)
-
+    console.log("helloo")
     if (action === "LOGIN") {
       // login
     } else {
@@ -47,8 +48,13 @@ export default function AuthForm() {
         )}
         <Input id="email" label="E-mail" register={register} errors={errors} type="email" />
         <Input id="password" label="Password" register={register} errors={errors} type="password" />
-        <div>
-          
+        <div className="space-y-[10px]">
+          <Button type="submit" classNames="w-full sm:w-[400px] h-[60px] flex items-center" bgColor="bg-[#EF6B4A]" textColor="text-[#FFFFFF]" disabled={isLoading}>
+              {action === "LOGIN" ? "Login" : "Register"}
+          </Button>
+          <Button classNames="w-full sm:w-[400px] h-[60px] flex items-center" bgColor="transparent" textColor="text-[#6251DD]" borderColor="border border-[#6251DD]" disabled={isLoading}>
+            {action === "LOGIN" ? "Register" : "Login"}
+          </Button>
         </div>
       </form>
     </div>
