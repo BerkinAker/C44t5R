@@ -46,9 +46,9 @@ export default function AuthForm() {
   return (
     <div className="mt-12 mx-auto sm:mx-0 sm:max-w-md">
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 mb-[10px]">
-        {action === "register" && <Input id="name" label="Name" register={register} disabled={isLoading} errors={errors} />}
-        <Input id="email" label="E-mail" register={register} disabled={isLoading} errors={errors} type="email" />
-        <Input id="password" label="Password" register={register} disabled={isLoading} errors={errors} type="password" />
+        {action === "register" && <Input id="name" label="Name" placeholder="John Doe" register={register} disabled={isLoading} errors={errors} required/>}
+        <Input id="email" label="E-mail" placeholder="john@mail.com" register={register} disabled={isLoading} errors={errors} type="email" required />
+        <Input id="password" label="Password" placeholder="********" register={register} disabled={isLoading} errors={errors} type="password" required />
         <Button type="submit" classNames="w-full sm:w-[400px] h-[60px] flex items-center hover:scale-95 hover:transition-all hover:duration-500" bgColor="bg-[#EF6B4A]" textColor="text-[#FFFFFF]" disabled={isLoading}>
           {action === "login" ? "Login" : "Register"}
         </Button>
