@@ -24,8 +24,6 @@ export default function RegisterForm() {
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     setIsLoading(true)
 
-    console.log("helloo regos")
-    console.log(data)
     try {
       const response = await handleRegister(
         data.email,

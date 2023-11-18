@@ -28,26 +28,6 @@ export default async function HomePage() {
           </div>
         ))}
       </div>
-
-
-
-
-
-
-
-
-
-
-
-      {/* <div className="container mx-auto">
-        <div className="flex justify-between items-center">
-          <h1 className="text-[32px] font-semibold mb-[20px]">Best Seller</h1>
-          <p className="text-[#EF6B4A] text-[20px] font-semibold cursor-pointer">View All</p>
-        </div>
-        <BookCard />
-
-      </div> */}
-
     </>
   )
 }

@@ -23,7 +23,6 @@ export default function AuthForm() {
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     setIsLoading(true)
-    console.log("helloo login")
 
     try {
       if (action === "login") {
