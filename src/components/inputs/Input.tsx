@@ -56,11 +56,20 @@ export default function Input({ id, label, type, placeholder, register, errors, 
             {...register(id, { required: required, minLength: 6, maxLength: 20, pattern: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,20}$/ })}
           />
         )}
+        {(id === "checkbox") && (
+          <input
+            className="w-[18px] h-[18px] mb-4"
+            id={id}
+            type={type}
+            placeholder={placeholder}
+            disabled={disabled}
+            {...register(id)}
+          />
+        )}
         {/* give me a sentence that describe name input must be 20 or min 3 okay ? */}
         {errors.name && id === "name" && (<span className="text-rose-500 text-sm">The name must be between 3-32 characters. </span>)}
         {errors.email && id === "email" && (<span className="text-rose-500 text-sm">The email must be valid.</span>)}
         {errors.password && id === "password" && (<span className="text-rose-500 text-sm">The password must be alphanumeric and between 6-20 characters. </span>)}
-
       </div>
     </div>
   )

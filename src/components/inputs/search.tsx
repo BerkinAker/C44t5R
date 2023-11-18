@@ -8,11 +8,8 @@ import {
 
 import clsx from "clsx";
 
-interface InputProps {
-  register: UseFormRegister<FieldValues>,
-}
 
-export default function Search({ register }: InputProps) {
+export default function Search() {
   return (
     <div className="flex items-center">
       <input
