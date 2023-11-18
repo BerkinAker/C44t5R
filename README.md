@@ -1,7 +1,7 @@
 ### Proje test linki
 https://c44t5-r-berkinaker.vercel.app/
 
-### Proje video tantım linki
+### Proje video tanıtım linki
 https://youtu.be/utCQNfV7DUM
 
 ### Stack
