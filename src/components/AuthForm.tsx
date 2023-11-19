@@ -52,6 +52,8 @@ export default function AuthForm() {
         }
       } else {
         const response = await handleRegister(data.name, data.email, data.password)
+        router.push('/home')
+        dispatch(login())
         console.log('Response register: ', response)
       }
 
